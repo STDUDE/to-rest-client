@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/drawer_icon_orders"
+            android:title="МОИ ЗАКАЗЫ" />
+        <item
+            android:id="@+id/nav_hottours"
+            android:icon="@drawable/drawer_icon_hottours"
+            android:title="НОВЫЙ ПОИСК" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/drawer_icon_search"
+            android:title="НОВЫЙ ПОИСК" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/drawer_icon_history"
+            android:title="ИСТОРИЯ" />
+        <item
+            android:id="@+id/nav_subscribe"
+            android:icon="@drawable/drawer_icon_subscribe"
+            android:title="ПОДПИСКИ" />
+        <item
+            android:id="@+id/nav_man"
+            android:icon="@drawable/drawer_icon_man"
+            android:title="ТУРИСТЫ" />
+        <item
+            android:id="@+id/nav_touroperators"
+            android:icon="@drawable/drawer_icon_touroperators"
+            android:title="ТУРОПЕРАТОРЫ" />
+        <item
+            android:id="@+id/nav_request"
+            android:icon="@drawable/drawer_icon_request"
+            android:title="ЗАЯВКА НА ПОДБОР ТУРА" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/drawer_icon_info"
+            android:title="О КОМПАНИИ" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

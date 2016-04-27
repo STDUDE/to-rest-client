@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">To Rest</string>
+    <string name="title_activity_search_tour">Поиск тура</string>
+    <string name="FromTV">Откуда</string>
+    <string name="WhereTV">Куда</string>
+    <string name="BeginDestinationTV">BeginDestination</string>
+    <string name="EndDestinationTV">EndDestination</string>
+    <string name="ResortTV">Курорт</string>
+    <string name="ResortListTV">Выбрать курорт</string>
+    <string name="HotelTV">Отель</string>
+    <string name="HotelListTV">Выбрать отель</string>
+    <string name="HotelCategoryTV">Категория отеля</string>
+    <string name="SupplyTV">Питание</string>
+    <string name="HotelCategoryListTV">Выбрать категорию</string>
+    <string name="SupplyListTV">Способ питания</string>
+    <string name="NumberOfNightsTV">Количество ночей</string>
+    <string name="DeparturePeriodTV">Период вылета</string>
+    <string name="TouristsTV">Туристы</string>
+    <string name="SearchTourButton">Подобрать тур</string>
+    <string name="KidsTV">Дети</string>
+    <string name="MansTV">Взрослые</string>
+    <string name="ManCountTV">(count)</string>
+    <string name="KidCountTV">(count)</string>
+    <string name="title_activity_request_for_tour_selection">Заявка на подбор тура</string>
+    <string name="title_activity_sliding_menu">SlidingMenu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

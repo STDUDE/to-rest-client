@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "PrimaryBackground">#fdf6f9</color>
+    <color name = "ToolBarBackground">#89ac58</color>
+    <color name = "ListBlockBackground">#ecf4e0</color>
+    <color name = "ButtonBackground">#c2f47d</color>
+    <color name = "TouristBackground">#a65eba</color>
+    <color name = "LittleTextColor">#A61C58</color>
+    <color name = "MediumTextColor">#633c6e</color>
+    <color name = "HintTextColor">#c2cfaf</color>
+    <color name = "TouristTextColor">#fcf7f5</color>
+    <color name = "DayNumberTextColor">#89ac58</color>
+</resources>
