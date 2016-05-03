@@ -6,11 +6,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.travel.torest.R;
 
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.ViewById;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +21,9 @@ import org.androidannotations.annotations.EFragment;
 public class RequestForSearchFragment extends Fragment {
 
     private static final String TAG = "STDude";
+
+
+
 
     public RequestForSearchFragment() {
         // Required empty public constructor

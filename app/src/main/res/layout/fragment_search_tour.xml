@@ -126,7 +126,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ResortTV"
-                    android:id="@+id/ResortTV"
                     android:textIsSelectable="false"
                     android:phoneNumber="false"
                     android:editable="false"
@@ -140,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/ResortListTV"
-                    android:id="@+id/ResortListTV"
+                    android:id="@+id/ResortTV"
                     android:textColor="@color/MediumTextColor"
                     android:textStyle="bold"
                     android:textSize="18dp" />
@@ -175,7 +174,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/HotelTV"
-                    android:id="@+id/hotelTV"
                     android:textIsSelectable="false"
                     android:phoneNumber="false"
                     android:editable="false"
@@ -189,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/HotelListTV"
-                    android:id="@+id/HotelListTV"
+                    android:id="@+id/HotelTV"
                     android:textColor="@color/MediumTextColor"
                     android:textStyle="bold"
                     android:textSize="18dp" />
@@ -224,7 +222,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/HotelCategoryTV"
-                        android:id="@+id/HotelCategoryTV"
                         android:layout_weight="1"
                         android:textIsSelectable="false"
                         android:phoneNumber="false"
@@ -238,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/HotelCategoryListTV"
-                        android:id="@+id/HotelCategoryListTV"
+                        android:id="@+id/HotelCategoryTV"
                         android:textColor="@color/MediumTextColor"
                         android:textStyle="bold"
                         android:textSize="18dp"
@@ -263,7 +260,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/SupplyTV"
-                        android:id="@+id/SupplyTV"
                         android:layout_weight="1"
                         android:textIsSelectable="false"
                         android:phoneNumber="false"
@@ -277,7 +273,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/SupplyListTV"
-                        android:id="@+id/SupplyListTV"
+                        android:id="@+id/SupplyTV"
                         android:textColor="@color/MediumTextColor"
                         android:textStyle="bold"
                         android:textSize="18dp"
@@ -323,7 +319,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:gravity="center_vertical|center_horizontal"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/BeginDestDateLayout">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -337,7 +334,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="00"
-                        android:id="@+id/textView5"
+                        android:id="@+id/BeginDestDay"
                         android:gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="40dp"
@@ -355,7 +352,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="month"
-                            android:id="@+id/textView6" />
+                            android:id="@+id/BeginDestMonth" />
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -366,7 +363,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="year"
-                                android:id="@+id/textView7"
+                                android:id="@+id/BeginDestYear"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
@@ -390,7 +387,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:gravity="center_vertical|center_horizontal"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:id="@+id/EndDestDateLayout">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -404,7 +402,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="00"
-                        android:id="@+id/textView10"
+                        android:id="@+id/EndDestDay"
                         android:gravity="center_vertical"
                         android:textStyle="bold"
                         android:textSize="40dp"
@@ -422,7 +420,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="month"
-                            android:id="@+id/textView11" />
+                            android:id="@+id/EndDestMonth" />
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -433,7 +431,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="year"
-                                android:id="@+id/textView12"
+                                android:id="@+id/EndDestYear"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentStart="true"
@@ -446,7 +444,7 @@
                                 android:text="года"
                                 android:id="@+id/textView13"
                                 android:layout_alignParentTop="true"
-                                android:layout_toRightOf="@+id/textView12" />
+                                android:layout_toRightOf="@+id/EndDestYear" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -491,9 +489,10 @@
                 <SeekBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/seekBar"
+                    android:id="@+id/NumberOfNightsSB"
                     android:layout_weight="1"
-                    android:indeterminate="false" />
+                    android:indeterminate="false"
+                    android:max="25" />
 
             </LinearLayout>
 
@@ -549,7 +548,7 @@
                             android:layout_height="match_parent"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:text="@string/ManCountTV"
-                            android:id="@+id/ManCount"
+                            android:id="@+id/ManCountTV"
                             android:textColor="@color/TouristTextColor"
                             android:layout_marginLeft="5dp"
                             android:textStyle="bold"
@@ -578,7 +577,7 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:text="@string/KidCountTV"
-                            android:id="@+id/KidCount"
+                            android:id="@+id/KidCountTV"
                             android:textColor="@color/TouristTextColor"
                             android:layout_marginLeft="5dp"
                             android:textStyle="bold"

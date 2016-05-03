@@ -1,5 +1,6 @@
 package com.travel.torest.screens;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.support.design.widget.NavigationView;
@@ -14,11 +15,14 @@ import android.view.MenuItem;
 import com.travel.torest.R;
 import com.travel.torest.fragments.*;
 
+import org.androidannotations.annotations.Click;
+
 public class SlidingMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "STDude";
     NavigationView navigationView = null;
+
     Toolbar toolbar = null;
 
     @Override
@@ -92,14 +96,12 @@ public class SlidingMenu extends AppCompatActivity
                 break;
             case R.id.nav_hottours:
                 onClickHotTours();
+                break;
             case R.id.nav_search:
                 onClickSearchTour();
                 break;
             case R.id.nav_history:
                 onClickHistory();
-                break;
-            case R.id.nav_subscribe:
-                onClickSubscribes();
                 break;
             case R.id.nav_man:
                 onClickTourists();
@@ -153,14 +155,6 @@ public class SlidingMenu extends AppCompatActivity
     protected void onClickHistory() {
         Log.i(TAG, "user clicked HISTORY");
         HistoryFragment fragment = new HistoryFragment_();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_content, fragment);
-        fragmentTransaction.commit();
-    }
-
-    protected void  onClickSubscribes() {
-        Log.i(TAG, "user clicked SUBSCRIBES");
-        SubscribesFragment fragment = new SubscribesFragment_();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_content, fragment);
         fragmentTransaction.commit();

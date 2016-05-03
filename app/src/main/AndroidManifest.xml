@@ -22,9 +22,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".screens.CountriesActivity_"
+            android:label="@string/title_activity_countries"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.ResortsActivity_"
+            android:label="@string/title_activity_resorts"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.HotelsActivity_"
+            android:label="@string/title_activity_hotels"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
     </application>
-
-</manifest><!--
- android:exported="true"
-        android:debuggable="true"
--->
+</manifest>

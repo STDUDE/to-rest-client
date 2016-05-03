@@ -37,10 +37,13 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="date"
+                android:inputType="textMultiLine"
                 android:ems="10"
                 android:id="@+id/editText4"
-                android:hint="Ваши пожелания по туру" />
+                android:hint="Ваши пожелания по туру"
+                android:maxLines="5"
+                android:minLines="3"
+                android:nestedScrollingEnabled="true" />
 
             <TextView
                 android:layout_width="wrap_content"
