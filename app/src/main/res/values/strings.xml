@@ -29,10 +29,21 @@
 
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_countries">CountriesActivity</string>
     <string name="title_activity_resorts">ResortsActivity</string>
     <string name="action_set">1</string>
     <string name="title_activity_hotels">HotelsActivity</string>
+    <string name="standby_mode">Пожалуйста, подождите…</string>
+    <string name="info_to_rest">
+        TO REST - максимально удобный ресурс для поиска и бронирования туров.
+        Огромное количество пользователей ежедневно доверяют нам выбор подходящего тура.
+    </string>
+    <string name="title_activity_cities">CitiesActivity</string>
+    <string name="title_activity_holtel_categories">HoltelCategoriesActivity</string>
+    <string name="title_activity_supply">SupplyActivity</string>
+    <string name="title_activity_new_tourist">NewTouristActivity</string>
+    <string name="title_activity_to_book">ToBookActivity</string>
+    <string name="title_activity_hot_tours">HotToursActivity</string>
+    <string name="title_activity_hotel_info">HotelInfoActivity</string>
+
 </resources>

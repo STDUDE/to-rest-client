@@ -18,6 +18,12 @@ public class Region {
         this.country = country;
     }
 
+    public Region(){
+        this.id = 0;
+        this.region = "region";
+        this.country = new Country();
+    }
+
     @Override
     public boolean equals(Object object){
         Region region = (Region)object;

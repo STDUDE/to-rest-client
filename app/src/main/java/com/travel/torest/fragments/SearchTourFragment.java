@@ -11,15 +11,14 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.travel.torest.R;
+import com.travel.torest.screens.CitiesActivity_;
 import com.travel.torest.screens.CountriesActivity_;
-import com.travel.torest.screens.HotelsActivity;
+import com.travel.torest.screens.HotelCategoriesActivity_;
 import com.travel.torest.screens.HotelsActivity_;
-import com.travel.torest.screens.ResortsActivity;
 import com.travel.torest.screens.ResortsActivity_;
 
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ViewById;
+
+import org.androidannotations.annotations.*;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,8 +39,7 @@ public class SearchTourFragment extends Fragment {
     @ViewById(R.id.EndDestDay) TextView endDestDayTV;
     @ViewById(R.id.EndDestMonth) TextView endDestMonthTV;
     @ViewById(R.id.EndDestYear) TextView endDestYearTV;
-    @ViewById(R.id.NumberOfNightsSB)
-    SeekBar numberOfNightsSB;
+    @ViewById(R.id.NumberOfNightsSB) SeekBar numberOfNightsSB;
     @ViewById(R.id.ManCountTV) TextView manCountTV;
     @ViewById(R.id.KidCountTV) TextView kidCountTV;
 
@@ -63,6 +61,20 @@ public class SearchTourFragment extends Fragment {
         startActivity(intent);
     }
 
+    @Click(R.id.BeginDestinationLayout)
+    void begDestLClick(){
+        Intent intent = new Intent(getActivity(), CitiesActivity_.class);
+        //intent.putExtra("region_id", id);
+        startActivity(intent);
+    }
+
+    @Click(R.id.HotelCategoryLayout)
+    void hotelCategoryLClick(){
+        Intent intent = new Intent(getActivity(), HotelCategoriesActivity_.class);
+        //intent.putExtra("region_id", id);
+        startActivity(intent);
+    }
+
     @Click(R.id.HotelLayout)
     void hotelLClick(){
         Intent intent = new Intent(getActivity(), HotelsActivity_.class);
@@ -75,4 +87,5 @@ public class SearchTourFragment extends Fragment {
         //intent.putExtra("region_id", id);
         startActivity(intent);
     }
+
 }

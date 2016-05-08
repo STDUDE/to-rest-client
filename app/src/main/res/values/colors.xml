@@ -10,4 +10,6 @@
     <color name = "HintTextColor">#c2cfaf</color>
     <color name = "TouristTextColor">#fcf7f5</color>
     <color name = "DayNumberTextColor">#89ac58</color>
+    <color name = "PrimaryLight">#89ac58</color>
+    <color name = "PrimaryDark">#A61C58</color>
 </resources>

@@ -3,6 +3,10 @@
     package="com.travel.torest"
     android:installLocation="preferExternal">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/to_rest"
@@ -46,5 +50,63 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.travel.torest.screens.SlidingMenu" />
         </activity>
+        <activity
+            android:name=".screens.CitiesActivity_"
+            android:label="@string/title_activity_cities"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.HotelCategoriesActivity_"
+            android:label="@string/title_activity_holtel_categories"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.SupplyActivity_"
+            android:label="@string/title_activity_supply"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.NewTouristActivity_"
+            android:label="@string/title_activity_new_tourist"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.ToBookActivity_"
+            android:label="@string/title_activity_to_book"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.HotelInfoActivity_" />
+        </activity>
+
+        <activity
+            android:name=".screens.HotToursActivity_"
+            android:label="@string/title_activity_hot_tours"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.SlidingMenu" />
+        </activity>
+        <activity
+            android:name=".screens.HotelInfoActivity_"
+            android:label="@string/title_activity_hotel_info"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.travel.torest.screens.HotToursActivity_" />
+        </activity>
     </application>
+
 </manifest>

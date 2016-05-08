@@ -1,13 +1,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.travel.torest.fragments.TouristsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
+    <ListView android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="tourists" />
+        android:id="@+id/TouristsList" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addTourist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_input_add"
+        android:background="@color/ButtonBackground"
+        app:backgroundTint="@color/ButtonBackground" />
 
 </FrameLayout>

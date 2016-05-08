@@ -3,11 +3,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.travel.torest.fragments.InfoFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="info" />
+        android:padding="10dp"
+        android:background="@color/PrimaryBackground">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:background="@drawable/info_to_rest"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="info_to_rest" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:text="@string/info_to_rest"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="ПЕРЕЙТИ НА САЙТ"
+            android:id="@+id/redirect_button"
+            android:layout_gravity="center_horizontal"
+            style="@style/AppTheme.NoActionBar.Button"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="НАПИСАТЬ ОТЗЫВ"
+            android:id="@+id/recall_button"
+            android:layout_gravity="center_horizontal"
+            style="@style/AppTheme.NoActionBar.Button"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="МЫ В СОЦИАЛЬНЫХ СЕТЯХ"
+            android:id="@+id/textView18"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/MediumTextColor"
+            android:autoText="false"
+            android:layout_margin="5dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:background="@drawable/button_fb_normal"
+                android:layout_gravity="top|center_horizontal"
+                android:focusable="true"
+                android:padding="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:background="@drawable/button_google_normal"
+                android:layout_gravity="top|center_horizontal"
+                android:focusable="true"
+                android:padding="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton3"
+                android:background="@drawable/button_vk_normal"
+                android:layout_gravity="top|center_horizontal"
+                android:focusable="true"
+                android:padding="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton4"
+                android:background="@drawable/button_ok_normal"
+                android:layout_gravity="top|center_horizontal"
+                android:focusable="true"
+                android:padding="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

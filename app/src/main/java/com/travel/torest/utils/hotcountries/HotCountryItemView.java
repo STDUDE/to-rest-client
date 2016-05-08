@@ -1,4 +1,4 @@
-package com.travel.torest.network.utils.countries;
+package com.travel.torest.utils.hotcountries;
 
 import android.content.Context;
 import android.widget.LinearLayout;
@@ -11,19 +11,16 @@ import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
 /**
- * Created by Antony on 03.05.2016.
+ * Created by Antony on 09.05.2016.
  */
-@EViewGroup(R.layout.country_list_item)
-public class CountryItemView extends LinearLayout{
+@EViewGroup(R.layout.view_hotcountries_list_item)
+public class HotCountryItemView extends LinearLayout {
 
-    @ViewById(R.id.CountryName)
-    TextView country;
-
-    public CountryItemView(Context context) {
+    public HotCountryItemView(Context context) {
         super(context);
     }
 
     public void bind(Country country) {
-        this.country.setText(country.getCountry());
+
     }
 }

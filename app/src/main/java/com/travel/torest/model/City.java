@@ -17,6 +17,12 @@ public class City{
         this.region = region;
     }
 
+    public City(){
+        this.id = 0;
+        this.city = "city";
+        this.region = new Region();
+    }
+
     @Override
     public boolean equals(Object object){
         City city = (City) object;

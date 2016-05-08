@@ -10,6 +10,11 @@ public class Country {
     private int id;
     private String country;
 
+    public Country(){
+        this.id = 0;
+        this.country = "country";
+    }
+
     public Country(int id, String country){
         this.id = id;
         this.country = country;

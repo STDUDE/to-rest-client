@@ -106,9 +106,9 @@ public class SlidingMenu extends AppCompatActivity
             case R.id.nav_man:
                 onClickTourists();
                 break;
-            case R.id.nav_touroperators:
+           /* case R.id.nav_touroperators:
                 onClickTouroperators();
-                break;
+                break;*/
             case R.id.nav_request:
                 onClickSearchRequest();
                 break;
