@@ -48,6 +48,7 @@ public class SlidingMenu extends AppCompatActivity
         if (navigationView != null) {
             navigationView.setNavigationItemSelectedListener(this);
         }
+        onClickInfo();
         Log.i(TAG, "end creation SLIDING MENU ACTIVITY");
     }
 
@@ -73,12 +74,8 @@ public class SlidingMenu extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
 
         Log.i(TAG, "user clicked on OPTIONS ITEM");
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -106,9 +103,6 @@ public class SlidingMenu extends AppCompatActivity
             case R.id.nav_man:
                 onClickTourists();
                 break;
-           /* case R.id.nav_touroperators:
-                onClickTouroperators();
-                break;*/
             case R.id.nav_request:
                 onClickSearchRequest();
                 break;
@@ -163,14 +157,6 @@ public class SlidingMenu extends AppCompatActivity
     protected void onClickTourists() {
         Log.i(TAG, "user clicked TOURISTS");
         TouristsFragment fragment = new TouristsFragment_();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_content, fragment);
-        fragmentTransaction.commit();
-    }
-
-    protected void onClickTouroperators() {
-        Log.i(TAG, "user clicked TOUROPERATORS");
-        TouroperatorsFragment fragment = new TouroperatorsFragment_();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_content, fragment);
         fragmentTransaction.commit();

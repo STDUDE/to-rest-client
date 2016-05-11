@@ -9,18 +9,18 @@ package com.travel.torest.model;
 public class City{
     private int id;
     private String city;
-    private Region region;
+    private Country country;
 
-    public City(int id, String city, Region region){
+    public City(int id, String city, Country country){
         this.id = id;
         this.city = city;
-        this.region = region;
+        this.country = country;
     }
 
     public City(){
         this.id = 0;
         this.city = "city";
-        this.region = new Region();
+        this.country = new Country();
     }
 
     @Override
@@ -47,11 +47,11 @@ public class City{
         this.city = city;
     }
 
-    public Region getRegion() {
-        return region;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setRegion(Region region) {
-        this.region = region;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }

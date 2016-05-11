@@ -2,6 +2,10 @@ package com.travel.torest.network;
 
 import android.util.Log;
 
+import com.travel.torest.localstorage.CacheService;
+import com.travel.torest.localstorage.MessageService;
+
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -30,9 +34,12 @@ import java.net.URL;
 public class ServerConnect {
     private static String TAG = "STDude";
 
+    @Bean
+    MessageService message;
+
     private static final int TIMEOUT_MILLISEC = 20000;
 
-    private static final String URL_API_V1 = "https://to-rest-server.herokuapp.com/webapp/webservice/";
+    private static final String URL_API_V1 = "http://to-rest-server.herokuapp.com/webapp/webservice/";
     private String url;
     private String request;
     private String response;
@@ -55,7 +62,6 @@ public class ServerConnect {
             connection.setReadTimeout(TIMEOUT_MILLISEC);
             connection.connect();
 
-
             OutputStream os = connection.getOutputStream();
             OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
             osw.write(request);
@@ -76,10 +82,13 @@ public class ServerConnect {
             return test(new JSONObject(response));
 
         } catch (MalformedURLException e) {
+            message.setError("Ошибка сервера");
             e.printStackTrace();
         } catch (ProtocolException e) {
+            message.setError("Ошибка сервера");
             e.printStackTrace();
         } catch (JSONException e) {
+            message.setError("Ошибка чтения данных");
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -95,7 +104,7 @@ public class ServerConnect {
         return false;
     }
 
-    public boolean testGET(String url){
+    public boolean testGET(){
         while (true) {
             try {
                 Log.i(TAG, "HTTP REQUEST:" + URL_API_V1 + url);
@@ -126,7 +135,7 @@ public class ServerConnect {
     }
 
     public boolean test(JSONObject json) throws JSONException {
-        return !json.get("response").equals("error");
+        return !json.get("status").equals("error");
     }
 
     public Object getErrorMessage(JSONObject json) throws JSONException {

@@ -2,6 +2,9 @@ package com.travel.torest.network.address;
 
 import android.util.Log;
 
+import com.travel.torest.localstorage.CacheService;
+import com.travel.torest.localstorage.MessageService;
+import com.travel.torest.model.Country;
 import com.travel.torest.model.arrays.CountriesArray;
 import com.travel.torest.network.Request;
 import com.travel.torest.network.ServerConnect;
@@ -9,6 +12,7 @@ import com.travel.torest.network.ServerConnect;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EApplication;
 import org.androidannotations.annotations.EBean;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,6 +28,9 @@ public class CountriesRequest implements Request{
 
     @Bean
     ServerConnect serverConnect;
+
+    @Bean
+    MessageService cache;
 
     @Bean
     CountriesArray countries;
@@ -45,6 +52,19 @@ public class CountriesRequest implements Request{
 
     @Override
     public void ParseResponse(){
+        try {
+            JSONObject resp = new JSONObject(serverConnect.getResponse());
+            JSONArray body = (JSONArray) resp.get("body");
+            countries.clear();
+            for(int i = 0; i < body.length(); i++){
+                Log.i(TAG, "id: " + body.getJSONObject(i).getInt("id") + " country: " + body.getJSONObject(i).getString("country"));
+                countries.add(new Country(body.getJSONObject(i).getInt("id"), body.getJSONObject(i).getString("country")));
+                Log.i(TAG, "INIT COUNTRIES ++" + countries.get(i).getCountry());
+            }
 
+        } catch (JSONException e) {
+            cache.setError("Ошибка чтения данных");
+            e.printStackTrace();
+        }
     }
 }

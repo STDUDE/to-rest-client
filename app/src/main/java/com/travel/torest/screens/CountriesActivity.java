@@ -1,14 +1,18 @@
 package com.travel.torest.screens;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.travel.torest.R;
+import com.travel.torest.localstorage.CacheService;
+import com.travel.torest.localstorage.MessageService;
 import com.travel.torest.model.arrays.CountriesArray;
 import com.travel.torest.model.Country;
 import com.travel.torest.network.Request;
@@ -22,6 +26,7 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ItemClick;
+import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 import org.json.JSONException;
 
@@ -43,7 +48,7 @@ public class CountriesActivity extends AppCompatActivity {
     CountriesListAdapter adapter;
 
     @Bean
-    CountriesArray countries;
+    MessageService message;
 
     @Bean
     CountriesRequestCreator countriesRequestCreator;
@@ -73,8 +78,6 @@ public class CountriesActivity extends AppCompatActivity {
         progressDialog = ProgressDialog.show(this, getString(R.string.standby_mode),
                 "", true);
         initCountriesArray();
-        progressDialog.hide();
-        countriesList.setAdapter(adapter);
     }
 
     @Background
@@ -84,18 +87,30 @@ public class CountriesActivity extends AppCompatActivity {
         try {
             Log.i(TAG, "CLIENT GENERATE REQUEST COUNTRIES");
             request.GenerateRequest();
-            Log.i(TAG, "CLIENT WILL SEND REQUEST COUNTRIES");
-            request.GetResponse();
-            Log.i(TAG, "CLIENT GET RESPONCE COUNTRIES");
-           /* if(request.GetResponse())
-
+            if(request.GetResponse()) {
                 request.ParseResponse();
+                success();
+            }
             else {
-                Log.i(TAG, "2222222222222222222");
-            }*/
+                failed();
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
 
+    @UiThread
+    void success() {
+        progressDialog.hide();
+        countriesList.setAdapter(adapter);
+        Log.i(TAG, "size " + adapter.getCount());
+    }
+
+    @UiThread
+    void failed() {
+        progressDialog.hide();
+        Toast toast = Toast.makeText(this, message.getError(), Toast.LENGTH_LONG);
+        toast.show();
+        NavUtils.navigateUpFromSameTask(this);
     }
 }

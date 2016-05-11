@@ -1,5 +1,6 @@
 package com.travel.torest.model.arrays;
 
+import com.travel.torest.model.Country;
 import com.travel.torest.model.Resort;
 
 import org.androidannotations.annotations.EBean;

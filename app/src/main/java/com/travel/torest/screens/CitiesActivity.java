@@ -7,8 +7,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.travel.torest.R;
+import com.travel.torest.localstorage.CacheService;
+import com.travel.torest.localstorage.MessageService;
 import com.travel.torest.model.arrays.CitiesArray;
 import com.travel.torest.model.City;
 import com.travel.torest.network.Request;
@@ -22,6 +25,7 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ItemClick;
+import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 import org.json.JSONException;
 
@@ -41,6 +45,9 @@ public class CitiesActivity extends AppCompatActivity {
 
     @Bean
     CitiesListAdapter adapter;
+
+    @Bean
+    MessageService message;
 
     @Bean
     CitiesArray cities;
@@ -70,10 +77,8 @@ public class CitiesActivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.to_rest);
         getSupportActionBar().setTitle(R.string.title_activity_cities);
         progressDialog = ProgressDialog.show(this, getString(R.string.standby_mode),
-                "Загрузка списка стран", true);
+                "Загрузка списка городов", true);
         initCitiesArray();
-        progressDialog.hide();
-        citiesList.setAdapter(adapter);
     }
 
     @Background
@@ -81,19 +86,31 @@ public class CitiesActivity extends AppCompatActivity {
         RequestCreator requestCreator = citiesRequestCreator;
         Request request = requestCreator.ConcreteRequestCreator();
         try {
-            Log.i(TAG, "CLIENT GENERATE REQUEST COUNTRIES");
+            Log.i(TAG, "CLIENT GENERATE REQUEST CITIES");
             request.GenerateRequest();
-            Log.i(TAG, "CLIENT WILL SEND REQUEST COUNTRIES");
-            request.GetResponse();
-            Log.i(TAG, "CLIENT GET RESPONCE COUNTRIES");
-           /* if(request.GetResponse())
+            if(request.GetResponse()) {
                 request.ParseResponse();
+                success();
+            }
             else {
-                Log.i(TAG, "2222222222222222222");
-            }*/
+                failed();
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
+    }
+    @UiThread
+    void success() {
+        progressDialog.hide();
+        citiesList.setAdapter(adapter);
+    }
+
+    @UiThread
+    void failed() {
+        progressDialog.hide();
+        Toast toast = Toast.makeText(this, message.getError(), Toast.LENGTH_LONG);
+        toast.show();
+        NavUtils.navigateUpFromSameTask(this);
     }
 }

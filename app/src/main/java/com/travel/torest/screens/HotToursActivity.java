@@ -37,7 +37,7 @@ public class HotToursActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.to_rest);
-        getSupportActionBar().setTitle(R.string.title_activity_hotels);
+        getSupportActionBar().setTitle(R.string.title_activity_hot_tours);
     }
 
 }

@@ -37,13 +37,13 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:ems="10"
-                android:id="@+id/editText4"
-                android:hint="Ваши пожелания по туру"
+                android:id="@+id/description"
                 android:maxLines="5"
                 android:minLines="3"
-                android:nestedScrollingEnabled="true" />
+                android:nestedScrollingEnabled="true"
+                android:hint="Ваши пожелания по туру"
+                android:elegantTextHeight="false"
+                android:inputType="textImeMultiLine" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,9 +62,9 @@
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:ems="10"
-                android:id="@+id/editText2"
                 android:layout_gravity="center_horizontal"
-                android:hint="+375 33 999 99 99" />
+                android:hint="+375 33 999 99 99"
+                android:id="@+id/phone" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,33 +83,15 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText3"
+                android:id="@+id/email"
                 android:layout_gravity="center_horizontal"
                 android:hint="example@mail.com" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="ГОРОД"
-                android:id="@+id/textView18"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textColor="@color/MediumTextColor"
-                android:autoText="false"
-                android:layout_margin="5dp" />
-
-            <ExpandableListView
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:id="@+id/expandableListView"
-                android:layout_gravity="center_horizontal" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="ОТПРАВИТЬ"
-                android:id="@+id/button"
+                android:id="@+id/sendButton"
                 android:layout_gravity="center_horizontal"
                 style="@style/AppTheme.NoActionBar.Button"
                 android:layout_margin="8dp" />
@@ -124,7 +106,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="ПОЗВОНИТЬ \n +375(33) 609-15-16"
-                android:id="@+id/button2"
+                android:id="@+id/callButton"
                 android:layout_gravity="center_horizontal"
                 style="@style/AppTheme.NoActionBar.Button"
                 android:layout_margin="8dp" />

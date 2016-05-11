@@ -602,7 +602,7 @@
                         <ImageButton
                             android:layout_width="fill_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/ManButton"
+                            android:id="@+id/ManButton1"
                             android:layout_weight="1"
                             android:src="@mipmap/icon_man_normal"
                             android:background="@color/TouristBackground" />
@@ -612,7 +612,7 @@
                             android:layout_height="match_parent"
                             android:id="@+id/ManButton2"
                             android:layout_weight="1"
-                            android:src="@mipmap/icon_man_normal"
+                            android:src="@mipmap/icon_man_selected_normal"
                             android:background="@color/TouristBackground" />
 
                         <ImageButton
@@ -620,7 +620,7 @@
                             android:layout_height="match_parent"
                             android:id="@+id/ManButton3"
                             android:layout_weight="1"
-                            android:src="@mipmap/icon_man_normal"
+                            android:src="@mipmap/icon_man_selected_normal"
                             android:background="@color/TouristBackground" />
 
                         <ImageButton
@@ -628,7 +628,7 @@
                             android:layout_height="match_parent"
                             android:id="@+id/ManButton4"
                             android:layout_weight="1"
-                            android:src="@mipmap/icon_man_normal"
+                            android:src="@mipmap/icon_man_selected_normal"
                             android:background="@color/TouristBackground" />
 
                     </LinearLayout>
@@ -672,7 +672,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/KidButton1"
                                 android:layout_weight="1"
-                                android:src="@mipmap/icon_kid_normal"
+                                android:src="@mipmap/icon_kid_selected_normal"
                                 android:background="@color/TouristBackground" />
 
                         </LinearLayout>
@@ -697,7 +697,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/KidButton2"
                                 android:layout_weight="1"
-                                android:src="@mipmap/icon_kid_normal"
+                                android:src="@mipmap/icon_kid_selected_normal"
                                 android:background="@color/TouristBackground" />
 
                         </LinearLayout>
@@ -722,7 +722,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/KidButton3"
                                 android:layout_weight="1"
-                                android:src="@mipmap/icon_kid_normal"
+                                android:src="@mipmap/icon_kid_selected_normal"
                                 android:background="@color/TouristBackground" />
 
                         </LinearLayout>
@@ -747,7 +747,7 @@
                                 android:layout_height="wrap_content"
                                 android:id="@+id/KidButton4"
                                 android:layout_weight="1"
-                                android:src="@mipmap/icon_kid_normal"
+                                android:src="@mipmap/icon_kid_selected_normal"
                                 android:background="@color/TouristBackground" />
 
                         </LinearLayout>

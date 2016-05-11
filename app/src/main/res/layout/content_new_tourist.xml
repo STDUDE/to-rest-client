@@ -55,70 +55,32 @@
                 android:gravity="center"
                 android:id="@+id/AgeCategoryGroup">
 
-                <LinearLayout
-                    android:orientation="horizontal"
+                <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/KidCategory"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:buttonTint="@color/ButtonBackground"
+                    android:singleLine="false"
+                    android:backgroundTint="@color/PrimaryLight"
                     android:layout_gravity="center_vertical"
-                    android:gravity="center"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp">
+                    android:allowUndo="false"
+                    android:breakStrategy="simple"
+                    android:drawableRight="@drawable/add_tourist_man" />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/KidCategory"
-                        android:checked="true"
-                        android:clickable="false"
-                        android:buttonTint="@color/ButtonBackground"
-                        android:singleLine="false"
-                        android:backgroundTint="@color/PrimaryLight"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/add_tourist_radio_button_inactive"
-                        android:allowUndo="false"
-                        android:breakStrategy="simple" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageView4"
-                        android:background="@drawable/add_tourist_man"
-                        android:backgroundTint="@color/PrimaryLight"
-                        android:layout_alignParentEnd="false"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
+                <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/ManCategory"
-                        android:checked="false"
-                        android:clickable="false"
-                        android:allowUndo="false"
-                        android:contextClickable="false"
-                        android:enabled="true"
-                        android:buttonTint="@color/ButtonBackground"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/add_tourist_radio_button_inactive" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageView3"
-                        android:background="@mipmap/icon_kid_selected_normal"
-                        android:backgroundTint="@color/PrimaryLight"
-                        android:layout_alignParentEnd="false"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ManCategory"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:allowUndo="false"
+                    android:contextClickable="false"
+                    android:enabled="true"
+                    android:buttonTint="@color/ButtonBackground"
+                    android:layout_gravity="center_vertical"
+                    android:drawableRight="@mipmap/icon_kid_yellow"/>
             </RadioGroup>
 
             <TextView
@@ -159,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/TouristSecondName"
+                android:id="@+id/TouristLastName"
                 android:layout_gravity="center_horizontal"
                 android:hint="Введите фамилию" />
 
@@ -204,15 +166,6 @@
                 android:gravity="center"
                 android:id="@+id/GenderGroup">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp" >
-
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -223,26 +176,7 @@
                         android:singleLine="false"
                         android:backgroundTint="@color/PrimaryLight"
                         android:layout_gravity="center_vertical"
-                        android:background="@drawable/add_tourist_radio_button_inactive" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageView5"
-                        android:background="@drawable/add_tourist_man"
-                        android:backgroundTint="@color/PrimaryLight"
-                        android:layout_alignParentEnd="false"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="10dp" >
+                        android:drawableRight="@drawable/add_tourist_man"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -255,17 +189,8 @@
                         android:enabled="true"
                         android:buttonTint="@color/ButtonBackground"
                         android:layout_gravity="center_vertical"
-                        android:background="@drawable/add_tourist_radio_button_inactive" />
+                        android:drawableRight="@drawable/add_tourist_woman"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageView6"
-                        android:background="@drawable/add_tourist_woman"
-                        android:backgroundTint="@color/PrimaryLight"
-                        android:layout_alignParentEnd="false"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
             </RadioGroup>
 
             <TextView
@@ -410,8 +335,8 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="ОТПРАВИТЬ"
-                android:id="@+id/button"
+                android:text="ДОБАВИТЬ"
+                android:id="@+id/Add"
                 android:layout_gravity="center_horizontal"
                 style="@style/AppTheme.NoActionBar.Button"
                 android:layout_margin="8dp" />

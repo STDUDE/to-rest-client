@@ -11,10 +11,10 @@ import java.util.ArrayList;
  */
 @EBean(scope = EBean.Scope.Singleton)
 public class CountriesArray extends ArrayList<Country> {
-    public CountriesArray(){
+    /*public CountriesArray(){
         this.add(new Country());
         this.add(new Country());
         this.add(new Country());
         this.add(new Country());
-    }
+    }*/
 }
